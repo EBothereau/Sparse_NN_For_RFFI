@@ -1,4 +1,4 @@
-# Sparse Neural Networks for Resilient Radio Frequency Fingerprint Identification
+# Investigating Sparse Neural Networks for RF Fingerprint Identification
 Emma BOTHEREAU∗ , Alice CHILLET∗ , Robin GERZAGUET∗ , Matthieu GAUTIER∗ , Olivier BERDER∗ , 
 ∗ Univ Rennes, CNRS, IRISA, firstname.name@irisa.fr
 
