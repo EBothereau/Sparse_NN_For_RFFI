@@ -11,7 +11,7 @@ In this repository are presented the Neural Networks used for the article in Jul
 We used the following neural networks :
 - [Sankhe CNN](https://ieeexplore.ieee.org/document/8882379)
 ![](Illustrations/SankheWisig.png)
-- [Hanna CNN]([https://www.mdpi.com/1424-8220/22/6/2111](https://arxiv.org/abs/2112.15363))
+- [Hanna CNN](https://arxiv.org/abs/2112.15363))
 ![](Illustrations/Hanna.png)
 
 ## Fundings
