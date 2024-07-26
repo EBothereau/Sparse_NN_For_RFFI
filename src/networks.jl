@@ -40,7 +40,7 @@ model = Chain(
 # --- Hanna CNN
 # ----------------------------------------------------
 
-        dr = 0.5 #Dropout rate
+dr = 0.5 #Dropout rate
 model = Chain(
     x -> reshape(x, (size(x)[1], 2, 1, size(x)[3])),
     Conv((3,2), 1 => 8, pad=SamePad(), relu), 
