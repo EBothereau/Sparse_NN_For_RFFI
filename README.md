@@ -14,4 +14,8 @@ We used the following neural networks :
 - [Hanna CNN]([https://www.mdpi.com/1424-8220/22/6/2111](https://arxiv.org/abs/2112.15363))
 ![](Illustrations/Hanna.png)
 
+## Fundings
+
+
+This work is funded by the French National Research Agency (ANR) under the grant number ANR-22-CE25-0007-01 (RedInBlack project)
 
