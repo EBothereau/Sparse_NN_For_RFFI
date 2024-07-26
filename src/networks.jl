@@ -3,7 +3,7 @@ using Flux
 
 
 #---- Number of TX
-Tx = 4 #6, 15 or 16 depending on the database
+M = 4 #6, 15 or 16 depending on the database
 
 
 # ----------------------------------------------------
@@ -32,7 +32,7 @@ model = Chain(
     Dropout(0.5),
     Dense(256, 128, relu),
     Dropout(0.5),
-    Dense(128,Tx),                                           
+    Dense(128,M),                                           
     Flux.softmax
 )
 
@@ -56,7 +56,7 @@ model = Chain(
     Dense(2048, 100, relu), 
     Dense(100, 80, relu),
     Dropout(dr),
-    Dense(80,Tx), 
+    Dense(80,M), 
     Flux.softmax
 )
 
