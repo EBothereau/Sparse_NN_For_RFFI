@@ -3,14 +3,14 @@ using Flux
 
 
 #---- Number of TX
-Tx = 6 
+Tx = 4 #6, 15 or 16 depending on the database
 
 
 # ----------------------------------------------------
 # --- Sankhe CNN
 # ----------------------------------------------------
 
-model =Chain(
+model = Chain(
     Conv((7,), 2 => 128, pad=SamePad(), relu),                    
     Conv((5,), 128 => 128, pad=SamePad(), relu),                  
     MaxPool((2,)),
@@ -32,25 +32,31 @@ model =Chain(
     Dropout(0.5),
     Dense(256, 128, relu),
     Dropout(0.5),
-    Dense(128,x),                                           
+    Dense(128,Tx),                                           
     Flux.softmax
 )
 
 # ----------------------------------------------------
-# --- Arroyo CNN
+# --- Hanna CNN
 # ----------------------------------------------------
 
-model =Chain(
-    Conv((10,), 2 => 64, pad=SamePad(), relu),  
-    MaxPool((2,)),
-    Conv((10,), 64 => 32, pad=SamePad(), relu),  
-    MaxPool((2,)),
-    Conv((10,), 32 => 16, pad=SamePad(), relu),  
-    MaxPool((2,)),
+        dr = 0.5 #Dropout rate
+model = Chain(
+    x -> reshape(x, (size(x)[1], 2, 1, size(x)[3])),
+    Conv((3,2), 1 => 8, pad=SamePad(), relu), 
+    MaxPool((2,1)),
+    Conv((3,2), 8 => 16, pad=SamePad(), relu), 
+    MaxPool((2,1)),
+    Conv((3,2), 8 => 16, pad=SamePad(), relu), 
+    MaxPool((2,1)),
+    Conv((3,2), 8 => 16, pad=SamePad(), relu), 
+    MaxPool((2,1)),
+
     Flux.flatten,
-    Dense(512,64), 
-    Dense(64,4), 
-    Dense(4,x), 
+    Dense(2048, 100, relu), 
+    Dense(100, 80, relu),
+    Dropout(dr),
+    Dense(80,Tx), 
     Flux.softmax
 )
 
