@@ -4,7 +4,7 @@ Emma BOTHEREAU∗ , Alice CHILLET∗ , Robin GERZAGUET∗ , Matthieu GAUTIER∗ 
 
 
 
-In this repository are presented the Neural Networks used for the article in Julia. 
+In this repository are presented the Neural Networks used for the article in Julia (Version 1.8.5), using Flux (v0.13.17). 
 
 ## Description
 
